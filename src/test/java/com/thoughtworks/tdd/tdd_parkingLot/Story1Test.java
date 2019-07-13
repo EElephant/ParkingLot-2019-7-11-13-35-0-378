@@ -23,7 +23,6 @@ public class Story1Test {
 
     @Test
     public void should_return_car_when_call_fetch_given_ticket(){
-//        Ticket ticket = new Ticket();
         Car car = new Car();
         ParkingBoy parkingBoy = new ParkingBoy();
         Ticket ticket = parkingBoy.park(car);
@@ -108,7 +107,7 @@ public class Story1Test {
 
     //AC 5
     @Test
-    public void should_return_null_when_call_park_given_eleven_cars(){
+    public void should_return_null_when_call_park_given_eleven_cars_and_one_parkingLot(){
         ParkingBoy parkingBoy = new ParkingBoy();
         for(int i=0;i<10;i++){
             parkingBoy.park(new Car());
@@ -121,7 +120,7 @@ public class Story1Test {
 
     // AC exact01
     @Test
-    public void should_return_null_when_call_park_given_the_same_car(){
+    public void should_return_null_when_call_park_given_the_same_car_and_one_parkingLot(){
         ParkingBoy parkingBoy = new ParkingBoy();
         Car car = new Car();
         Ticket ticket1 = parkingBoy.park(car);

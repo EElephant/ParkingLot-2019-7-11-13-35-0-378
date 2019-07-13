@@ -41,4 +41,8 @@ public class ParkingLot {
     public boolean isFull(){
         return parkingInfo.size() == POSITIONCOUNT;
     }
+
+    public int getAvalidPositionCount(){
+        return POSITIONCOUNT - parkingInfo.size();
+    }
 }

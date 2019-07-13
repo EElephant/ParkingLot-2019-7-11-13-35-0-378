@@ -43,7 +43,7 @@ public class Story2Test {
     }
 
     @Test
-    public void should_return_not_enough_position_when_call_fetch_given_eleven_cars_and_query_message(){
+    public void should_return_not_enough_position_when_call_fetch_given_eleven_cars_and_query_messag_and_one_parkingLot(){
         ParkingBoy parkingBoy = new ParkingBoy();
         for(int i = 0; i < 10; i++)
             parkingBoy.park(new Car());

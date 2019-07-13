@@ -7,7 +7,7 @@ public class ParkingBoy {
 
     public Ticket park(Car car) {
         Ticket ticket = null;
-        if(!parkingLot.isFull())
+        if (parkingLot.getAvalidPositionCount() > secondParkingLot.getAvalidPositionCount())
             ticket = parkingLot.getTicketByCar(car);
         else
             ticket = secondParkingLot.getTicketByCar(car);
@@ -16,10 +16,20 @@ public class ParkingBoy {
 
     public Car fetch(Ticket ticket) {
         Car car = parkingLot.getCarByTicket(ticket);
+        if(car == null)
+            car = secondParkingLot.getCarByTicket(ticket);
         return car;
     }
 
     public String query() {
         return parkingLot.queryMessage();
+    }
+
+    public int getLotPositionCountByLot(int i) {
+        if(i == 1)
+            return parkingLot.getAvalidPositionCount();
+        if(i == 2)
+            return secondParkingLot.getAvalidPositionCount();
+        return 0;
     }
 }
