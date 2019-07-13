@@ -62,6 +62,7 @@ public class AC1Test {
         assertThat(car2,is(t2_car));
     }
 
+    //AC 3
     @Test
     public void should_return_null_when_call_fetch_given_wrong_ticket(){
         ParkingBoy parkingBoy = new ParkingBoy();
@@ -87,5 +88,21 @@ public class AC1Test {
         Car car = parkingBoy.fetch(null);
 
         assertEquals(car, null);
+    }
+
+    //AC 4
+    @Test
+    public void should_return_null_when_call_fetch_given_used_ticket(){
+        ParkingBoy parkingBoy = new ParkingBoy();
+
+        Car car = new Car();
+
+        Ticket ticket = parkingBoy.park(car);
+
+        Car car1 = parkingBoy.fetch(ticket);
+        Car car2 = parkingBoy.fetch(ticket);
+
+        assertThat(car1, notNullValue());
+        assertEquals(car2, null);
     }
 }
