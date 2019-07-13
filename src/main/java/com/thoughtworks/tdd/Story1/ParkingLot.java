@@ -11,6 +11,8 @@ public class ParkingLot {
     public Ticket getTicketByCar(Car car) {
         if(POSITIONCOUNT == parkingInfo.size())
             return null;
+        if(parkingInfo.values().contains(car))
+            return null;
         Ticket ticket = new Ticket();
         parkingInfo.put(ticket,car);
         return ticket;

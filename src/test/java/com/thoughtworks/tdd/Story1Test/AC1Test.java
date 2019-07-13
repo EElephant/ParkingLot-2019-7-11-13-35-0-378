@@ -118,6 +118,17 @@ public class AC1Test {
         Ticket ticket = parkingBoy.park(car_11);
         assertEquals(ticket, null);
 
-
     }
+    // AC exact01
+    @Test
+    public void should_return_null_when_call_park_given_the_same_car(){
+        ParkingBoy parkingBoy = new ParkingBoy();
+        Car car = new Car();
+        Ticket ticket1 = parkingBoy.park(car);
+        Ticket ticket2 = parkingBoy.park(car);
+
+        assertThat(ticket1, notNullValue());
+        assertEquals(ticket2, null);
+    }
+
 }
