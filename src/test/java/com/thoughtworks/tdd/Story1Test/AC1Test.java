@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertEquals;
 
 public class AC1Test {
 
@@ -59,6 +60,32 @@ public class AC1Test {
 
         assertThat(car1,is(t1_car));
         assertThat(car2,is(t2_car));
+    }
 
+    @Test
+    public void should_return_null_when_call_fetch_given_wrong_ticket(){
+        ParkingBoy parkingBoy = new ParkingBoy();
+
+        Car car1 = new Car();
+
+        parkingBoy.park(car1);
+        Ticket t2 = new Ticket();
+
+        Car car = parkingBoy.fetch(t2);
+
+        assertEquals(car, null);
+    }
+
+    @Test
+    public void should_return_null_when_call_fetch_given_null(){
+        ParkingBoy parkingBoy = new ParkingBoy();
+
+        Car car1 = new Car();
+
+        parkingBoy.park(car1);
+
+        Car car = parkingBoy.fetch(null);
+
+        assertEquals(car, null);
     }
 }

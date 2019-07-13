@@ -16,7 +16,7 @@ public class ParkingLot {
 
     public Car getCarByTicket(Ticket ticket){
 
-        Car car = parkingInfo.get(ticket);
+        Car car = parkingInfo.remove(ticket);
         return car;
     }
 }
