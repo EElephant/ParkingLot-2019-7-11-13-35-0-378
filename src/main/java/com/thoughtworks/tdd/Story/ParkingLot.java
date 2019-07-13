@@ -9,8 +9,10 @@ public class ParkingLot {
     private String message;
 
     public Ticket getTicketByCar(Car car) {
-        if(POSITIONCOUNT == parkingInfo.size())
+        if(POSITIONCOUNT == parkingInfo.size()){
+            message = "Not enough position.";
             return null;
+        }
         if(parkingInfo.values().contains(car))
             return null;
         if(car == null)
