@@ -5,10 +5,12 @@ import java.util.Map;
 
 public class ParkingLot {
     private Map<Ticket,Car> parkingInfo = new HashMap<>();
+    private final int POSITIONCOUNT = 10;
 
 
     public Ticket getTicketByCar(Car car) {
-
+        if(POSITIONCOUNT == parkingInfo.size())
+            return null;
         Ticket ticket = new Ticket();
         parkingInfo.put(ticket,car);
         return ticket;

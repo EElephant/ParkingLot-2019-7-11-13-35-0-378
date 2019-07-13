@@ -2,6 +2,7 @@ package com.thoughtworks.tdd.Story1Test;
 
 import com.thoughtworks.tdd.Story1.Car;
 import com.thoughtworks.tdd.Story1.ParkingBoy;
+import com.thoughtworks.tdd.Story1.ParkingLot;
 import com.thoughtworks.tdd.Story1.Ticket;
 import org.junit.jupiter.api.Test;
 
@@ -104,5 +105,19 @@ public class AC1Test {
 
         assertThat(car1, notNullValue());
         assertEquals(car2, null);
+    }
+
+    //AC 5
+    @Test
+    public void should_return_null_when_call_park_given_eleven_cars(){
+        ParkingBoy parkingBoy = new ParkingBoy();
+        for(int i=0;i<10;i++){
+            parkingBoy.park(new Car());
+        }
+        Car car_11 = new Car();
+        Ticket ticket = parkingBoy.park(car_11);
+        assertEquals(ticket, null);
+
+
     }
 }
