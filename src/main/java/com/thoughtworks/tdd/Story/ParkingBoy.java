@@ -3,10 +3,14 @@ package com.thoughtworks.tdd.Story;
 public class ParkingBoy {
 
     private ParkingLot parkingLot = new ParkingLot();
+    private ParkingLot secondParkingLot = new ParkingLot();
 
     public Ticket park(Car car) {
-
-        Ticket ticket = parkingLot.getTicketByCar(car);
+        Ticket ticket = null;
+        if(!parkingLot.isFull())
+            ticket = parkingLot.getTicketByCar(car);
+        else
+            ticket = secondParkingLot.getTicketByCar(car);
         return ticket;
     }
 

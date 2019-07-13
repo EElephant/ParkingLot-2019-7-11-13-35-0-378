@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class ParkingLot {
     private Map<Ticket,Car> parkingInfo = new HashMap<>();
-    private final int POSITIONCOUNT = 10;
+    private static final int POSITIONCOUNT = 10;
     private String message;
 
     public Ticket getTicketByCar(Car car) {
@@ -38,4 +38,7 @@ public class ParkingLot {
         return str;
     }
 
+    public boolean isFull(){
+        return parkingInfo.size() == POSITIONCOUNT;
+    }
 }
