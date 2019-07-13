@@ -1,4 +1,4 @@
-package com.thoughtworks.tdd.Story1;
+package com.thoughtworks.tdd.Story;
 
 public class ParkingBoy {
 
@@ -11,8 +11,11 @@ public class ParkingBoy {
     }
 
     public Car fetch(Ticket ticket) {
-
         Car car = parkingLot.getCarByTicket(ticket);
         return car;
+    }
+
+    public String query() {
+        return parkingLot.queryMessage();
     }
 }

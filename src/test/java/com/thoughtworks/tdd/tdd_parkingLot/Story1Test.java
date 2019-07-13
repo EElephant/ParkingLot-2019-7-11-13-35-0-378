@@ -1,9 +1,8 @@
-package com.thoughtworks.tdd.Story1Test;
+package com.thoughtworks.tdd.tdd_parkingLot;
 
-import com.thoughtworks.tdd.Story1.Car;
-import com.thoughtworks.tdd.Story1.ParkingBoy;
-import com.thoughtworks.tdd.Story1.ParkingLot;
-import com.thoughtworks.tdd.Story1.Ticket;
+import com.thoughtworks.tdd.Story.Car;
+import com.thoughtworks.tdd.Story.ParkingBoy;
+import com.thoughtworks.tdd.Story.Ticket;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -11,7 +10,7 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
 
-public class AC1Test {
+public class Story1Test {
 
     // AC1
     @Test

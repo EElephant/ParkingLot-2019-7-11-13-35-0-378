@@ -1,4 +1,4 @@
-package com.thoughtworks.tdd.Story1;
+package com.thoughtworks.tdd.Story;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,7 +6,7 @@ import java.util.Map;
 public class ParkingLot {
     private Map<Ticket,Car> parkingInfo = new HashMap<>();
     private final int POSITIONCOUNT = 10;
-
+    private String message;
 
     public Ticket getTicketByCar(Car car) {
         if(POSITIONCOUNT == parkingInfo.size())
@@ -21,8 +21,19 @@ public class ParkingLot {
     }
 
     public Car getCarByTicket(Ticket ticket){
+        if(ticket == null)
+            message = "Please provide your parking ticket.";
+        else if(parkingInfo.get(ticket) == null)
+            message = "Unrecognized parking ticket.";
 
         Car car = parkingInfo.remove(ticket);
         return car;
     }
+
+    public String queryMessage(){
+        String str = message;
+        message = "";
+        return str;
+    }
+
 }
