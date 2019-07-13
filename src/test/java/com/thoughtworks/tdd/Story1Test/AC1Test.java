@@ -119,6 +119,7 @@ public class AC1Test {
         assertEquals(ticket, null);
 
     }
+
     // AC exact01
     @Test
     public void should_return_null_when_call_park_given_the_same_car(){
@@ -131,4 +132,11 @@ public class AC1Test {
         assertEquals(ticket2, null);
     }
 
+    // AC exact02
+    @Test
+    public void should_return_null_when_call_park_given_null(){
+        ParkingBoy parkingBoy = new ParkingBoy();
+        Ticket ticket1 = parkingBoy.park(null);
+        assertEquals(ticket1, null);
+    }
 }

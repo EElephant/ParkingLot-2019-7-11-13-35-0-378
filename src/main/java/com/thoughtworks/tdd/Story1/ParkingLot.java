@@ -13,6 +13,8 @@ public class ParkingLot {
             return null;
         if(parkingInfo.values().contains(car))
             return null;
+        if(car == null)
+            return null;
         Ticket ticket = new Ticket();
         parkingInfo.put(ticket,car);
         return ticket;
