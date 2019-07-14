@@ -1,4 +1,4 @@
-package com.thoughtworks.tdd.Story;
+package com.thoughtworks.tdd.story6;
 
 public class ParkingBoy {
 
@@ -22,7 +22,8 @@ public class ParkingBoy {
     }
 
     public String query() {
-        return parkingLot.queryMessage();
+
+            return secondParkingLot.queryMessage();
     }
 
     public int getLotPositionCountByLot(int i) {

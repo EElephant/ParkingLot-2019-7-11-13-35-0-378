@@ -1,8 +1,18 @@
 package com.thoughtworks.tdd.tdd_parkingLot;
 
-import com.thoughtworks.tdd.Story.Car;
-import com.thoughtworks.tdd.Story.ParkingBoy;
-import com.thoughtworks.tdd.Story.Ticket;
+import com.thoughtworks.tdd.story1.Car;
+import com.thoughtworks.tdd.story1.ParkingBoy;
+import com.thoughtworks.tdd.story1.Ticket;
+//import com.thoughtworks.tdd.story3.Car;
+//import com.thoughtworks.tdd.story3.ParkingBoy;
+//import com.thoughtworks.tdd.story3.Ticket;
+//import com.thoughtworks.tdd.story4.Car;
+//import com.thoughtworks.tdd.story4.ParkingBoy;
+//import com.thoughtworks.tdd.story4.Ticket;
+//import com.thoughtworks.tdd.story5.Car;
+//import com.thoughtworks.tdd.story5.ParkingBoy;
+//import com.thoughtworks.tdd.story5.Ticket;
+
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -109,7 +119,7 @@ public class Story1Test {
     @Test
     public void should_return_null_when_call_park_given_eleven_cars_and_one_parkingLot(){
         ParkingBoy parkingBoy = new ParkingBoy();
-        for(int i=0;i<10;i++){
+        for(int i=0;i<30;i++){
             parkingBoy.park(new Car());
         }
         Car car_11 = new Car();
@@ -122,6 +132,9 @@ public class Story1Test {
     @Test
     public void should_return_null_when_call_park_given_the_same_car_and_one_parkingLot(){
         ParkingBoy parkingBoy = new ParkingBoy();
+        for(int i=0;i<29;i++){
+            parkingBoy.park(new Car());
+        }
         Car car = new Car();
         Ticket ticket1 = parkingBoy.park(car);
         Ticket ticket2 = parkingBoy.park(car);

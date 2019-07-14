@@ -1,15 +1,22 @@
-package com.thoughtworks.tdd.Story;
+package com.thoughtworks.tdd.story4;
+
+import com.thoughtworks.tdd.story5.Car;
+import com.thoughtworks.tdd.story5.Ticket;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class ParkingLot {
-    private Map<Ticket,Car> parkingInfo = new HashMap<>();
-    private static final int POSITIONCOUNT = 10;
+    private Map<Ticket, Car> parkingInfo = new HashMap<>();
+    private int position;
     private String message;
 
+    ParkingLot(int i){
+        position = i;
+    }
+
     public Ticket getTicketByCar(Car car) {
-        if(POSITIONCOUNT == parkingInfo.size()){
+        if(position == parkingInfo.size()){
             message = "Not enough position.";
             return null;
         }
@@ -39,10 +46,14 @@ public class ParkingLot {
     }
 
     public boolean isFull(){
-        return parkingInfo.size() == POSITIONCOUNT;
+        return parkingInfo.size() == position;
     }
 
     public int getAvalidPositionCount(){
-        return POSITIONCOUNT - parkingInfo.size();
+        return position - parkingInfo.size();
+    }
+
+    public int getPosition() {
+        return position;
     }
 }

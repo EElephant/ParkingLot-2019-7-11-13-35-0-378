@@ -1,10 +1,18 @@
 package com.thoughtworks.tdd.tdd_parkingLot;
 
-import com.thoughtworks.tdd.Story.Car;
-import com.thoughtworks.tdd.Story.ParkingBoy;
-import com.thoughtworks.tdd.Story.Ticket;
+import com.thoughtworks.tdd.story2.Car;
+import com.thoughtworks.tdd.story2.ParkingBoy;
+import com.thoughtworks.tdd.story2.Ticket;
+//import com.thoughtworks.tdd.story3.Car;
+//import com.thoughtworks.tdd.story3.ParkingBoy;
+//import com.thoughtworks.tdd.story3.Ticket;
+//import com.thoughtworks.tdd.story4.Car;
+//import com.thoughtworks.tdd.story4.ParkingBoy;
+//import com.thoughtworks.tdd.story4.Ticket;
+//import com.thoughtworks.tdd.story5.Car;
+//import com.thoughtworks.tdd.story5.ParkingBoy;
+//import com.thoughtworks.tdd.story5.Ticket;
 import org.junit.jupiter.api.Test;
-
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
@@ -45,7 +53,7 @@ public class Story2Test {
     @Test
     public void should_return_not_enough_position_when_call_fetch_given_eleven_cars_and_query_messag_and_one_parkingLot(){
         ParkingBoy parkingBoy = new ParkingBoy();
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < 30; i++)
             parkingBoy.park(new Car());
         Ticket ticket = parkingBoy.park(new Car());
         String message = parkingBoy.query();

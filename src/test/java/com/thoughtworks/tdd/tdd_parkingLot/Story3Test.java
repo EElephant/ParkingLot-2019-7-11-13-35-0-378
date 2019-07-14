@@ -1,8 +1,8 @@
 package com.thoughtworks.tdd.tdd_parkingLot;
 
-import com.thoughtworks.tdd.Story.Car;
-import com.thoughtworks.tdd.Story.ParkingBoy;
-import com.thoughtworks.tdd.Story.Ticket;
+import com.thoughtworks.tdd.story3.Car;
+import com.thoughtworks.tdd.story3.ParkingBoy;
+import com.thoughtworks.tdd.story3.Ticket;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.notNullValue;
