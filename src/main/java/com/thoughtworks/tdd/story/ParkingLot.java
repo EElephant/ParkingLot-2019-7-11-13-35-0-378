@@ -1,18 +1,15 @@
-package com.thoughtworks.tdd.story4;
-
-import com.thoughtworks.tdd.story5.Car;
-import com.thoughtworks.tdd.story5.Ticket;
+package com.thoughtworks.tdd.story;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class ParkingLot {
     private Map<Ticket, Car> parkingInfo = new HashMap<>();
-    private int position;
+    private int position = 10;
     private String message;
 
-    ParkingLot(int i){
-        position = i;
+    public ParkingLot(int position){
+        this.position = position;
     }
 
     public Ticket getTicketByCar(Car car) {
@@ -53,7 +50,7 @@ public class ParkingLot {
         return position - parkingInfo.size();
     }
 
-    public int getPosition() {
-        return position;
+    public int getPosition(){
+        return this.position;
     }
 }

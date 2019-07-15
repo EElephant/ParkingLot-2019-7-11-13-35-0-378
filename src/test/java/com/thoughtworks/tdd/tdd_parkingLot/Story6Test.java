@@ -1,9 +1,9 @@
 package com.thoughtworks.tdd.tdd_parkingLot;
 
-import com.thoughtworks.tdd.story6.Car;
-import com.thoughtworks.tdd.story6.Manager;
-import com.thoughtworks.tdd.story6.ParkingBoy;
-import com.thoughtworks.tdd.story6.Ticket;
+import com.thoughtworks.tdd.story.Car;
+import com.thoughtworks.tdd.story.Manager;
+import com.thoughtworks.tdd.story.ParkingBoy;
+import com.thoughtworks.tdd.story.Ticket;
 import org.junit.Test;
 
 import java.util.List;
